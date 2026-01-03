@@ -840,20 +840,31 @@
 
         async function downloadBrochure() {
             try {
-                const response = await fetch('files/Datecsoft Brochure 2026.pdf');
+                // Use URL encoding for spaces
+                const response = await fetch('files/Datecsoft%20Brochure%202026.pdf');
                 const blob = await response.blob();
-                const url = window.URL.createObjectURL(blob);
+
+                // Re-wrap the blob with octet-stream to force download
+                const forceDownloadBlob = new Blob([blob], { type: 'application/octet-stream' });
+                const url = window.URL.createObjectURL(forceDownloadBlob);
+
                 const link = document.createElement('a');
                 link.href = url;
-                link.download = 'Datecsoft_Brochure_2026.pdf';
+                link.setAttribute('download', 'Datecsoft_Brochure_2026.pdf');
                 document.body.appendChild(link);
                 link.click();
-                document.body.removeChild(link);
-                window.URL.revokeObjectURL(url);
+
+                // Cleanup
+                setTimeout(() => {
+                    document.body.removeChild(link);
+                    window.URL.revokeObjectURL(url);
+                }, 100);
             } catch (error) {
                 console.error('Error downloading the brochure:', error);
-                // Fallback to direct link if fetch fails
-                window.location.href = 'files/Datecsoft Brochure 2026.pdf';
+                const fallbackLink = document.createElement('a');
+                fallbackLink.href = 'files/Datecsoft%20Brochure%202026.pdf';
+                fallbackLink.setAttribute('download', 'Datecsoft_Brochure_2026.pdf');
+                fallbackLink.click();
             }
         }
     </script>
