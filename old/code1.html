@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Datecsoft - Servicios Principales</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#5a95e7",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111821",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom styles for cleaner scrollbar or specific adjustments if needed */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .service-card:hover .service-icon {
+            color: #5a95e7;
+            background-color: rgba(90, 149, 231, 0.1);
+        }
+    </style>
+</head>
+<body>
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden font-display">
+<!-- Background Pattern/Gradient (Subtle Industrial Feel) -->
+<div class="absolute inset-0 pointer-events-none opacity-40" style="background-image: radial-gradient(#cbd5e1 1px, transparent 1px); background-size: 32px 32px;">
+</div>
+<div class="layout-container flex h-full grow flex-col relative z-10">
+<!-- Section Header & Intro -->
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-10 pt-20">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<div class="flex flex-col gap-6 text-center items-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="text-primary text-xs font-bold uppercase tracking-wide">Expertos en AVEVA PI System</span>
+</div>
+<h1 class="text-[#0e131b] dark:text-white tracking-tight text-4xl md:text-5xl font-black leading-tight max-w-[800px]">
+                            Soluciones de Inteligencia Industrial
+                        </h1>
+<p class="text-[#506d95] dark:text-slate-400 text-lg font-normal leading-relaxed max-w-[720px]">
+                            Maximizamos el valor de sus operaciones en minería y energía a través de la gestión avanzada de datos OT/IT. Calidad, integridad y disponibilidad garantizada.
+                        </p>
+</div>
+</div>
+</div>
+<!-- Services Grid -->
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center pb-10">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-0 mt-8">
+<!-- Service 1: Implementación -->
+<div class="group/card service-card flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2634] p-6 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
+<div class="service-icon flex items-center justify-center w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors duration-300">
+<span class="material-symbols-outlined text-[28px]">dns</span>
+</div>
+<div class="flex flex-col gap-2 grow">
+<h3 class="text-[#0e131b] dark:text-white text-lg font-bold leading-tight">Implementación</h3>
+<p class="text-[#506d95] dark:text-slate-400 text-sm font-normal leading-relaxed">
+                                    Despliegue experto de infraestructura PI System escalable. Configuración de interfaces, servidores y alta disponibilidad para entornos críticos.
+                                </p>
+</div>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center text-primary text-sm font-semibold hover:gap-2 transition-all group-hover/card:underline" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2: Administración y Soporte -->
+<div class="group/card service-card flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2634] p-6 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
+<div class="service-icon flex items-center justify-center w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors duration-300">
+<span class="material-symbols-outlined text-[28px]">support_agent</span>
+</div>
+<div class="flex flex-col gap-2 grow">
+<h3 class="text-[#0e131b] dark:text-white text-lg font-bold leading-tight">Administración y Soporte</h3>
+<p class="text-[#506d95] dark:text-slate-400 text-sm font-normal leading-relaxed">
+                                    Mantenimiento proactivo 24/7 y resolución de incidencias. Garantizamos la continuidad operativa de sus activos de datos.
+                                </p>
+</div>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center text-primary text-sm font-semibold hover:gap-2 transition-all group-hover/card:underline" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3: Health Check -->
+<div class="group/card service-card flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2634] p-6 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
+<div class="service-icon flex items-center justify-center w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors duration-300">
+<span class="material-symbols-outlined text-[28px]">monitor_heart</span>
+</div>
+<div class="flex flex-col gap-2 grow">
+<h3 class="text-[#0e131b] dark:text-white text-lg font-bold leading-tight">Health Check PI System</h3>
+<p class="text-[#506d95] dark:text-slate-400 text-sm font-normal leading-relaxed">
+                                    Diagnóstico exhaustivo del estado de salud de su sistema. Detectamos cuellos de botella y optimizamos el rendimiento de la arquitectura.
+                                </p>
+</div>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center text-primary text-sm font-semibold hover:gap-2 transition-all group-hover/card:underline" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 4: Automatización -->
+<div class="group/card service-card flex flex-col gap-4 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-[#1a2634] p-6 shadow-sm hover:shadow-xl hover:border-primary/40 transition-all duration-300 hover:-translate-y-1">
+<div class="service-icon flex items-center justify-center w-12 h-12 rounded-lg bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-200 transition-colors duration-300">
+<span class="material-symbols-outlined text-[28px]">settings_suggest</span>
+</div>
+<div class="flex flex-col gap-2 grow">
+<h3 class="text-[#0e131b] dark:text-white text-lg font-bold leading-tight">Automatización de Reportes</h3>
+<p class="text-[#506d95] dark:text-slate-400 text-sm font-normal leading-relaxed">
+                                    Transformación de datos brutos en inteligencia de negocios. Automatización de procesos ETL y generación de dashboards KPIs.
+                                </p>
+</div>
+<div class="mt-auto pt-2">
+<a class="inline-flex items-center text-primary text-sm font-semibold hover:gap-2 transition-all group-hover/card:underline" href="#">
+                                    Ver detalles <span class="material-symbols-outlined text-sm ml-1">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom CTA Section -->
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-10 pb-20">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 items-center">
+<p class="text-[#506d95] dark:text-slate-400 text-center mb-6 max-w-lg">
+                        ¿Necesita una solución a medida para su planta o centro de operaciones?
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4 px-4 justify-center w-full">
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary hover:bg-primary/90 text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors shadow-lg shadow-primary/20">
+<span class="truncate">Solicitar Consultoría</span>
+</button>
+<button class="flex min-w-[200px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-transparent border border-[#d1dae6] dark:border-gray-600 hover:border-primary text-[#0e131b] dark:text-white hover:text-primary text-base font-bold leading-normal tracking-[0.015em] transition-colors bg-white dark:bg-[#1a2634]">
+<span class="truncate">Ver Catálogo Completo</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

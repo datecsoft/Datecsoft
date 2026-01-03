@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Datecsoft - Quick Wins con AVEVA PI System</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#4e9dca", // Accent Blue from prompt inspiration matches provided primary
+                        "primary-dark": "#3b7ca3",
+                        "accent-blue": "#4F7CCB", // Specific requested accent
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#141b1e",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#1e272c",
+                        "text-primary-light": "#101619",
+                        "text-secondary-light": "#5a798c",
+                        "text-primary-dark": "#e9eef1",
+                        "text-secondary-dark": "#9ab0be",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "sans": ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        /* Custom gradient for hero background */
+        .industrial-gradient {
+            background: linear-gradient(135deg, rgba(20, 27, 30, 0.95) 0%, rgba(30, 39, 44, 0.9) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-primary-light dark:text-text-primary-dark antialiased overflow-x-hidden">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root">
+<!-- Navbar -->
+<header class="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-gray-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-md">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 flex flex-1 justify-center py-0">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1">
+<div class="flex items-center justify-between whitespace-nowrap py-3">
+<div class="flex items-center gap-4 text-text-primary-light dark:text-text-primary-dark">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold leading-tight tracking-[-0.015em]">Datecsoft</h2>
+</div>
+<div class="hidden lg:flex flex-1 justify-end gap-8 items-center">
+<nav class="flex items-center gap-9">
+<a class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Servicios</a>
+<a class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Soluciones</a>
+<a class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Sectores</a>
+<a class="text-text-primary-light dark:text-text-primary-dark text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Contacto</a>
+</nav>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-6 bg-primary hover:bg-primary-dark text-white text-sm font-bold leading-normal tracking-[0.015em] transition-all duration-200 shadow-md hover:shadow-lg">
+<span class="truncate">Solicitar Consultoría</span>
+</button>
+</div>
+<!-- Mobile Menu Icon -->
+<div class="lg:hidden text-text-primary-light dark:text-text-primary-dark">
+<span class="material-symbols-outlined cursor-pointer">menu</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- Hero Section / Main Feature -->
+<main class="flex-grow">
+<!-- Hero with industrial background context -->
+<section class="relative w-full py-20 lg:py-32 overflow-hidden">
+<!-- Background Image with Overlay -->
+<div class="absolute inset-0 w-full h-full z-0">
+<img alt="Abstract industrial data network visualization" class="w-full h-full object-cover" data-alt="Abstract industrial data network visualization blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCWdXsHggNfMsEP2NVh2Y9kPsxV36w6Dyxs1AZJqVanTnBhRI-dU_G1OECCI4Hl-5sU7fAB3bNE_khZb2Hn86ldhqSKzLj49yZ0ymhI-aWRLeWe4k0dq42rgWGOweE8j809Usf7biP3vFLCQvbsaOuG6HfKwp93W6I28tS3NF1wzfc6hgSVwmqIRD05Rm7ErHcPNfy3oR9bgN8gqaiajzPL7Tf-FmPsK2M0HnWlccAkzByXyDFsB63yFVMVGlLUwNe1aMwWQWavnbK"/>
+<div class="absolute inset-0 bg-background-dark/80 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/90 to-transparent"></div>
+</div>
+<div class="relative z-10 layout-container flex justify-center px-4 md:px-10">
+<div class="max-w-[1280px] w-full flex flex-col md:flex-row gap-12 items-center">
+<div class="flex-1 flex flex-col gap-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 w-fit backdrop-blur-sm">
+<span class="material-symbols-outlined text-primary text-sm">bolt</span>
+<span class="text-primary text-xs font-bold uppercase tracking-wide">AVEVA PI System Partner</span>
+</div>
+<h1 class="text-white tracking-tight text-4xl md:text-5xl lg:text-6xl font-black leading-tight max-w-[800px]">
+                                Quick Wins en <span class="text-primary">30 Días</span> con AVEVA PI System
+                            </h1>
+<p class="text-gray-300 text-lg md:text-xl font-normal leading-relaxed max-w-[640px]">
+                                Maximiza el valor de tus datos operativos sin esperar meses. Soluciones rápidas y efectivas para minería, energía y manufactura.
+                            </p>
+<div class="flex flex-col sm:flex-row gap-4 mt-4">
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary-dark text-white text-base font-bold transition-all shadow-lg hover:shadow-primary/25">
+                                    Identifica quick wins ahora
+                                </button>
+<button class="flex items-center justify-center rounded-lg h-12 px-8 bg-white/10 hover:bg-white/20 border border-white/20 text-white text-base font-semibold backdrop-blur-sm transition-all">
+                                    Ver casos de éxito
+                                </button>
+</div>
+</div>
+<!-- Abstract Visual representation of dashboard -->
+<div class="flex-1 w-full relative hidden md:block">
+<div class="relative rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-surface-dark/50 backdrop-blur-md p-2 transform rotate-2 hover:rotate-0 transition-transform duration-500">
+<img alt="Dashboard interface showing data analytics graphs" class="rounded-lg w-full h-auto opacity-90" data-alt="Modern dark dashboard interface with analytics charts" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW18xU5qjaYcN08lmttJHypt0PGnjHMIm3pVMZOHkFDamiCb5pom2sYNFnFBOGk-vJZz2MXmjGa6R_X_yNOwEd91bEgSonBquqGLh1kc-VCtGMZ7iSYgZo2splCZRnc4A4lcOrh3zPoKh2c51_rz69d9b_MqJAbAV9z8VDfKX1B7GH2GorU8rzupjUwCq2ywAglwgoWRXVbwxJnINTGebJnfgE_AulV6K504zlsbydKHgubRbErLUgL347O-SHJLuAOugf7UkoYETb"/>
+<div class="absolute bottom-6 left-6 right-6 bg-surface-dark/90 p-4 rounded-lg border border-white/10 shadow-lg flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+<span class="text-white text-sm font-medium">Sistema Optimizado</span>
+</div>
+<span class="text-primary font-bold">+24% Eficiencia</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Detail Section (The Core Request) -->
+<section class="py-20 lg:py-28 bg-background-light dark:bg-background-dark relative">
+<div class="layout-container flex justify-center px-4 md:px-10">
+<div class="max-w-[1280px] w-full flex flex-col gap-16">
+<!-- Header of section -->
+<div class="text-center max-w-3xl mx-auto flex flex-col gap-4">
+<h2 class="text-text-primary-light dark:text-text-primary-dark text-3xl md:text-4xl font-bold tracking-tight">
+                                Resultados visibles, medibles y alineados al negocio
+                            </h2>
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-lg leading-relaxed">
+                                Enfocados en generar valor inmediato. Nuestra metodología ágil desbloquea el potencial oculto de tu infraestructura existente.
+                            </p>
+</div>
+<!-- Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group relative flex flex-col gap-5 p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="w-14 h-14 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">assignment</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold">Automatización</h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                                        Elimina las tareas manuales propensas a errores. Entregamos reportes críticos de producción listos cada mañana en tu bandeja de entrada.
+                                    </p>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+<span class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                                        Ver ejemplo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col gap-5 p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="w-14 h-14 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">monitoring</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold">Visibilidad Total</h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                                        Implementación de dashboards de Situational Awareness. Información contextualizada en tiempo real para Operaciones y Mantenimiento.
+                                    </p>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+<span class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                                        Ver ejemplo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col gap-5 p-8 rounded-2xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-800 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+<div class="w-14 h-14 rounded-xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+<span class="material-symbols-outlined text-3xl">tune</span>
+</div>
+<div class="flex flex-col gap-3">
+<h3 class="text-text-primary-light dark:text-text-primary-dark text-xl font-bold">Optimización Inmediata</h3>
+<p class="text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
+                                        Limpieza, estructuración y naming convention de tags PI. Una base de datos saludable es el primer paso para la transformación digital.
+                                    </p>
+</div>
+<div class="mt-auto pt-4 border-t border-gray-100 dark:border-gray-800">
+<span class="text-primary text-sm font-bold flex items-center gap-1 group-hover:gap-2 transition-all">
+                                        Ver ejemplo <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Conversion Strip / CTA Section -->
+<section class="relative py-24 overflow-hidden">
+<div class="absolute inset-0 bg-surface-dark z-0">
+<!-- Subtle pattern or texture -->
+<div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#4e9dca 1px, transparent 1px); background-size: 32px 32px;"></div>
+</div>
+<div class="relative z-10 layout-container flex justify-center px-4 md:px-10">
+<div class="max-w-[1280px] w-full flex flex-col lg:flex-row items-center justify-between gap-12 bg-primary/10 border border-primary/20 rounded-3xl p-8 md:p-12 backdrop-blur-sm">
+<div class="flex-1 flex flex-col gap-6">
+<h2 class="text-white text-3xl md:text-4xl font-bold leading-tight">
+                                ¿Listo para transformar tus operaciones?
+                            </h2>
+<p class="text-gray-300 text-lg max-w-xl">
+                                Agenda una sesión de descubrimiento sin costo. Identificaremos juntos dónde aplicar estos quick wins en tu planta.
+                            </p>
+<div class="flex flex-col gap-4 sm:flex-row sm:items-center">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="text-sm font-medium text-gray-200">Sin compromiso de compra</span>
+</div>
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined">check_circle</span>
+<span class="text-sm font-medium text-gray-200">Asesoría experta certificada</span>
+</div>
+</div>
+</div>
+<div class="flex-shrink-0">
+<button class="group flex items-center justify-center gap-3 rounded-xl h-14 px-8 bg-primary hover:bg-white text-white hover:text-primary text-lg font-bold shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 ring-4 ring-primary/20 hover:ring-white/50">
+<span class="truncate">Identifica quick wins en 30 días</span>
+<span class="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark py-12">
+<div class="layout-container flex flex-col items-center">
+<div class="px-4 md:px-10 w-full max-w-[1280px]">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-8 border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-2 text-text-primary-light dark:text-text-primary-dark">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="font-bold text-lg">Datecsoft</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-8">
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Política de Privacidad</a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Términos de Uso</a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors" href="#">Contacto</a>
+</div>
+</div>
+<div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+<p class="text-text-secondary-light dark:text-text-secondary-dark text-sm">© 2024 Datecsoft. Todos los derechos reservados.</p>
+<div class="flex gap-4">
+<!-- Social placeholders -->
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">public</span></a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-xl">mail</span></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
